@@ -4,6 +4,10 @@
 # orion
 
 <!-- badges: start -->
+
+[![Codecov test
+coverage](https://codecov.io/gh/thomasp85/orion/branch/main/graph/badge.svg)](https://app.codecov.io/gh/thomasp85/orion?branch=main)
+[![R-CMD-check](https://github.com/thomasp85/orion/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/thomasp85/orion/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 orion provides spatial searching to the euclid ecosystem. It does this

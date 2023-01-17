@@ -32,3 +32,5 @@ Remotes:
     thomasp85/euclid
 URL: https://github.com/thomasp85/orion
 BugReports: https://github.com/thomasp85/orion/issues
+Suggests: 
+    covr
