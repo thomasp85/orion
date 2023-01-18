@@ -30,7 +30,8 @@ Imports:
 Remotes: 
     dickoa/cgalh,
     thomasp85/euclid
-URL: https://github.com/thomasp85/orion
+URL: https://github.com/thomasp85/orion,
+    https://thomasp85.github.io/orion/
 BugReports: https://github.com/thomasp85/orion/issues
 Suggests: 
     covr
