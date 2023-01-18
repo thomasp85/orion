@@ -41,3 +41,58 @@ kd tree representation of the search space. The kd tree can be created with a
 range of different setups, using different splitters and bucket sizes for
 leaf nodes.
 }
+\details{
+Search performance is mostly informed by how well balanced the tree is. You
+can influence this by selecting a splitting rule to use when building up the
+tree. There is no single best rule and all rules has degenerate worst cases.
+If you have trouble during tree construction or performance issues during
+searches, try a different splitting rule or bucket size.
+\itemize{
+\item \code{"midpoint_of_rectangle"}: This splitting rule cuts a rectangle through its
+midpoint orthogonal to the longest side.
+\item \code{"midpoint_of_max_spread"}: This splitting rule cuts a rectangle through
+\code{(Mind+Maxd)/2} orthogonal to the dimension with the maximum point spread
+\verb{[Mind,Maxd]}.
+\item \code{"sliding_midpoint"} (default): This is a modification of the midpoint of
+rectangle splitting rule. It first attempts to perform a midpoint of
+rectangle split as described above. If data points lie on both sides of the
+separating plane the sliding midpoint rule computes the same separator as
+the midpoint of rectangle rule. If the data points lie only on one side it
+avoids this by sliding the separator, computed by the midpoint of rectangle
+rule, to the nearest data point.
+\item \verb{"median_of_rectangle}: The splitting dimension is the dimension of the
+longest side of the rectangle. The splitting value is defined by the median
+of the coordinates of the data points along this dimension.
+\item \code{"median_of_max_spread"}: The splitting dimension is the dimension with the
+largest spread. The splitting value is defined by the median of the
+coordinates of the data points along this dimension.
+\item \code{"fair"}: This splitting rule is a compromise between the median of
+rectangle splitting rule and the midpoint of rectangle splitting rule. This
+splitting rule maintains an upper bound on the maximal allowed ratio of the
+longest and shortest side of a rectangle (the value of this upper bound is
+set in the constructor of the fair splitting rule). Among the splits that
+satisfy this bound, it selects the one in which the points have the largest
+spread. It then splits the points in the most even manner possible, subject
+to maintaining the bound on the ratio of the resulting rectangles.
+\item \code{"sliding_fair"}: This splitting rule is a compromise between the fair
+splitting rule and the sliding midpoint rule. Sliding fair-split is based
+on the theory that there are two types of splits that are good: balanced
+splits that produce fat rectangles, and unbalanced splits provided the
+rectangle with fewer points is fat. Also, this splitting rule maintains an
+upper bound on the maximal allowed ratio of the longest and shortest side
+of a rectangle (the value of this upper bound is set in the constructor of
+the fair splitting rule). Among the splits that satisfy this bound, it
+selects the one one in which the points have the largest spread. It then
+considers the most extreme cuts that would be allowed by the aspect ratio
+bound. This is done by dividing the longest side of the rectangle by the
+aspect ratio bound. If the median cut lies between these extreme cuts, then
+we use the median cut. If not, then consider the extreme cut that is closer
+to the median. If all the points lie to one side of this cut, then we slide
+the cut until it hits the first point. This may violate the aspect ratio
+bound, but will never generate empty cells.
+}
+
+In order to improve performance of range queries on large data sets you can
+experiment with increasing the bucket size during tree building as it can
+lead to fewer traversels during searching.
+}
