@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://orion.r-euclid.com/404.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/index.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/reference/kd_tree.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/reference/kd_tree_range.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/reference/kd_tree_search.html</loc>
+  </url>
+  <url>
+    <loc>https://orion.r-euclid.com/reference/orion-package.html</loc>
+  </url>
+</urlset>
