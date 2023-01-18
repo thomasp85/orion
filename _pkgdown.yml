@@ -63,5 +63,5 @@ navbar:
         href: https://orion.r-euclid.com
     github:
       icon: fab fa-github fa-lg
-      href: https://github.com/thomasp85/polyclid/
+      href: https://github.com/thomasp85/orion/
       aria-label: github
