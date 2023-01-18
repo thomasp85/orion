@@ -73,6 +73,32 @@ euclid_plot(circ, fg = 'forestgreen')
 This is the basics — it is a very focused package. There is a bit more to it but
 this should be obvious from the docs.
 
+## Benchmark
+The advantages of using a kd tree over a naive approach.
+
+```{r}
+naive_search <- function(query, points, n) {
+  d <- distance_squared(query, points)
+  points[order(d)[seq_len(n)]]
+}
+
+lookup <- point(runif(1e4), runif(1e4))
+query <- point(0.5, 0.5)
+tree <- kd_tree(lookup)
+
+bench::mark(
+  naive               = naive_search(query, lookup, 10),
+  kd_tree_precomputed = kd_tree_search(query, tree, 10),
+  kd_tree_tree_build  = kd_tree_search(query, kd_tree(lookup), 10),
+  iterations = 100,
+  check = FALSE
+)
+```
+
+We can see that the construction of the tree makes the kd tree based search 
+slower than a single naive search, but a tree can be reused for multiple queries
+making it a good approach for most practical applications
+
 ## Code of Conduct
 
 Please note that the orion project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
