@@ -166,9 +166,9 @@
 <span><span class="co">#&gt; # A tibble: 3 × 6</span></span>
 <span><span class="co">#&gt;   expression               min   median `itr/sec` mem_alloc `gc/sec`</span></span>
 <span><span class="co">#&gt;   &lt;bch:expr&gt;          &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1 naive                 2.05ms   2.14ms     443.      114KB      0  </span></span>
-<span><span class="co">#&gt; 2 kd_tree_precomputed 102.75µs 105.58µs    9295.         0B     93.9</span></span>
-<span><span class="co">#&gt; 3 kd_tree_tree_build   28.02ms  28.65ms      34.9        0B      0</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 naive                 2.04ms   2.11ms     448.      114KB      0  </span></span>
+<span><span class="co">#&gt; 2 kd_tree_precomputed  99.47µs 103.98µs    9496.         0B     95.9</span></span>
+<span><span class="co">#&gt; 3 kd_tree_tree_build   28.24ms  28.59ms      34.9        0B      0</span></span></code></pre></div>
 <p>We can see that the construction of the tree makes the kd tree based search slower than a single naive search, but a tree can be reused for multiple queries making it a good approach for most practical applications</p>
 </div>
 <div class="section level2">
@@ -218,6 +218,8 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://CRAN.R-project.org/package=boundaries" class="external-link"><img src="https://www.r-pkg.org/badges/version/boundaries" alt="CRAN status"></a></li>
 <li><a href="https://app.codecov.io/gh/thomasp85/orion?branch=main" class="external-link"><img src="https://codecov.io/gh/thomasp85/orion/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://github.com/thomasp85/orion/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/thomasp85/orion/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
