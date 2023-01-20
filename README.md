@@ -5,6 +5,10 @@
 
 <!-- badges: start -->
 
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/boundaries)](https://CRAN.R-project.org/package=boundaries)
 [![Codecov test
 coverage](https://codecov.io/gh/thomasp85/orion/branch/main/graph/badge.svg)](https://app.codecov.io/gh/thomasp85/orion?branch=main)
 [![R-CMD-check](https://github.com/thomasp85/orion/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/thomasp85/orion/actions/workflows/R-CMD-check.yaml)
@@ -104,9 +108,9 @@ bench::mark(
 #> # A tibble: 3 × 6
 #>   expression               min   median `itr/sec` mem_alloc `gc/sec`
 #>   <bch:expr>          <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>
-#> 1 naive                 2.05ms   2.14ms     443.      114KB      0  
-#> 2 kd_tree_precomputed 102.75µs 105.58µs    9295.         0B     93.9
-#> 3 kd_tree_tree_build   28.02ms  28.65ms      34.9        0B      0
+#> 1 naive                 2.04ms   2.11ms     448.      114KB      0  
+#> 2 kd_tree_precomputed  99.47µs 103.98µs    9496.         0B     95.9
+#> 3 kd_tree_tree_build   28.24ms  28.59ms      34.9        0B      0
 ```
 
 We can see that the construction of the tree makes the kd tree based
