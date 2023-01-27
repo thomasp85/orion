@@ -31,7 +31,7 @@ Remotes:
     dickoa/cgalh,
     thomasp85/euclid
 URL: https://github.com/thomasp85/orion,
-    https://thomasp85.github.io/orion/
+    https://orion.r-euclid.com
 BugReports: https://github.com/thomasp85/orion/issues
 Suggests: 
     covr
